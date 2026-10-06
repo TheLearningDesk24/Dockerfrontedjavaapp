@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopHub - Online Shopping</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="topbar">
+    <div class="nav-main">
+        <a class="logo" href="/">shop<span>hub</span></a>
+        <div class="delivery">
+            <small>Deliver to</small>
+            <strong>India ▾</strong>
+        </div>
+        <form id="searchForm" class="search">
+            <select id="categorySelect" aria-label="Category">
+                <option value="All">All</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Accessories">Accessories</option>
+                <option value="Home">Home</option>
+            </select>
+            <input id="searchInput" type="search" placeholder="Search products">
+            <button aria-label="Search">⌕</button>
+        </form>
+        <div class="nav-actions">
+            <button class="nav-link"><small>Hello, sign in</small><strong>Account ▾</strong></button>
+            <button class="nav-link"><small>Returns</small><strong>& Orders</strong></button>
+            <button id="cartButton" class="cart">🛒 <b>Cart</b><span id="cartCount">0</span></button>
+        </div>
+    </div>
+    <nav class="subnav">
+        <button id="menuButton">☰ <b>All</b></button>
+        <a href="#deals">Today's Deals</a>
+        <a href="#products">Best Sellers</a>
+        <a href="#products">New Releases</a>
+        <a href="#products">Electronics</a>
+        <a href="#products">Customer Service</a>
+    </nav>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">WELCOME TO SHOPHUB</p>
+            <h1>Everything you need.<br><span>Delivered simply.</span></h1>
+            <p>Discover electronics, accessories and everyday essentials at great prices.</p>
+            <a class="hero-button" href="#products">Shop now</a>
+        </div>
+    </section>
+
+    <section class="category-strip">
+        <div class="section-heading">
+            <h2>Shop by category</h2>
+        </div>
+        <div class="category-cards">
+            <button data-category="Electronics"><span>💻</span><b>Electronics</b><small>Laptops & more</small></button>
+            <button data-category="Accessories"><span>⌨️</span><b>Accessories</b><small>Work essentials</small></button>
+            <button data-category="Home"><span>🏠</span><b>Home</b><small>Everyday needs</small></button>
+            <button data-category="All"><span>⭐</span><b>Top picks</b><small>Customer favorites</small></button>
+        </div>
+    </section>
+
+    <section id="deals" class="deals">
+        <div class="section-heading">
+            <div>
+                <h2>Today's deals</h2>
+                <p>Great products. Great prices.</p>
+            </div>
+            <a href="#products">See all</a>
+        </div>
+        <div id="dealProducts" class="product-grid"></div>
+    </section>
+
+    <section id="products" class="products-section">
+        <div class="section-heading">
+            <div>
+                <h2>Explore products</h2>
+                <p id="resultText">Showing all products</p>
+            </div>
+            <select id="sortSelect" class="sort">
+                <option value="default">Sort: Featured</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="name">Name</option>
+            </select>
+        </div>
+        <div id="productsGrid" class="product-grid"></div>
+    </section>
+</main>
+
+<div id="cartPanel" class="cart-panel" aria-hidden="true">
+    <div class="cart-header">
+        <h2>Shopping Cart</h2>
+        <button id="closeCart">✕</button>
+    </div>
+    <div id="cartItems"></div>
+    <div class="cart-footer">
+        <div><span>Subtotal</span><strong id="cartTotal">₹0</strong></div>
+        <button class="checkout">Proceed to checkout</button>
+    </div>
+</div>
+<div id="overlay" class="overlay"></div>
+<div id="toast" class="toast"></div>
+
+<footer>
+    <div class="footer-main">
+        <div><h3>ShopHub</h3><p>Simple shopping for everyday life.</p></div>
+        <div><h4>Get to know us</h4><a>About us</a><a>Careers</a></div>
+        <div><h4>Help</h4><a>Your account</a><a>Shipping</a><a>Returns</a></div>
+        <div><h4>Connect</h4><a>Customer service</a><a>Contact us</a></div>
+    </div>
+    <div class="footer-bottom">© 2026 ShopHub. Learning project.</div>
+</footer>
+
+<script src="/js/app.js"></script>
+</body>
+</html>
